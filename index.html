@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            Prashant's Christmas Clock 
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+            <meta http-equiv="refresh" content="10">
+        </title>
+<style>
+    #countdown-bkg{
+background-image: url("https://christmaswebmaster.com/images/santa-countdown.png"); 
+height:197px; 
+width:275px; 
+background-repeat: no-repeat;
+background-size: 275px 197px;
+}
+.countdown-txt{
+padding-left:130px; 
+font-size:18px; 
+padding-right: 10px; 
+padding-top:65px; 
+text-align:center;
+}
+</style>
+    </head>
+    <body style="background-color: greenyellow;">
+        <div id="countdown-bkg">
+    <div class="countdown-txt">
+     <script language="javascript" type="text/javascript">
+      today = new Date();
+      BigDay = new Date("December 25, 2021")
+      msPerDay = 24 * 60 * 60 * 1000 ;
+      timeLeft = (BigDay.getTime() - today.getTime());
+      e_daysLeft = timeLeft / msPerDay;
+      daysLeft = Math.floor(e_daysLeft);
+      e_hrsLeft = (e_daysLeft - daysLeft)*24;
+      hrsLeft = Math.floor(e_hrsLeft);
+      minsLeft = Math.floor((e_hrsLeft - hrsLeft)*60);
+      document.write( daysLeft+" days, "+hrsLeft+" hours and "+minsLeft+" minutes left until Christmas!");
+    </script>
+    </div>
+    </div>
+    </body>
+    <script src="script.js">
+        setTimeout(function(){
+            location.reload();
+        },1000);
+    </script>
+</html>
